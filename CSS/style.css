@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0 ;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container{
+    height: 100%;
+    margin: 3% 2% 0 2%;
+}
+.container::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.block-container::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.heading{
+    text-align: center;
+}
+.block{
+    width: 32%;
+    float: left;
+    display:inline-block;
+    background-color: gray;
+    border: 2px solid black;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 5%;
+}
+.badge{
+    position: absolute;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 5px;
+    background-color: red;
+    right: 0;
+    top:0;
+}
+.badge-purple{
+    background-color: purple;
+}
+.badge-yellow{
+    background-color: yellow;
+}
+.block:nth-child(2){
+    margin: 0 1.5%;
+}
+.para{
+    padding-top: 15px;
+}
+/* 992px above desktop,768-991px tablet,less than 767px mobile view */
+@media screen and (max-width:767px) {
+    .block{
+        width: 100%;
+    }
+    .block:nth-child(2){
+        margin: 0 0 5% 0;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .block{
+        width: 48.5%;
+    }
+    .block:nth-child(3){
+        width: 100% ;
+    }
+    .block:nth-child(2){
+        margin: 0 0 5% 3%;
+    }
+}
